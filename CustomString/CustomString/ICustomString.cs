@@ -8,5 +8,9 @@ namespace CustomString
 {
     interface ICustomString
     {
+        string ToString();
+        void Insert(string stringToInsert, int index);
+        void Remove(int startIndex, int numCharsToRemove);
+        int Length();
     }
 }
