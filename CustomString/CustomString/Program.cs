@@ -46,6 +46,7 @@ namespace CustomString
         {
             SystemString systemstring = new SystemString();
             systemstring.Insert("nt", 9);
+            systemstring.Remove(7, 2);
         }
     }
 }

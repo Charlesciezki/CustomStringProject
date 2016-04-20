@@ -34,15 +34,30 @@ namespace CustomString
         public int Length()
         {
             int counter = 0;
-            foreach (char letter in collection)
+            foreach (char letter in baseString)
             {
-
+                counter++;
             }
+            Console.WriteLine(counter);
+            return counter;
         }
 
         public void Remove(int startIndex, int numCharsToRemove)
         {
-            throw new NotImplementedException();
+            string newString = "";
+            for (int i = 0; i < baseString.Count(); i++)
+            {
+                if (i >= startIndex && i < (startIndex + numCharsToRemove))
+                {
+                }
+                else
+                {
+                    newString += baseString[i];
+                }
+            }
+            Console.WriteLine(newString);
+            Console.ReadLine();
         }
+        
     }
 }
