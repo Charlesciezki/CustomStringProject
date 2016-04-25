@@ -8,16 +8,30 @@ namespace CustomString
 {
     //Underlying structure: System.Collections.Generic.LinkedList
     //Each node of the underlying C# LinkedList holds one character
-    class SystemLinkedListString : ICustomString
+    public class SystemLinkedListString : ICustomString
     {
+        public List<char> myList = new List<char>(){ 'r', 'a', 'p', 't', 'u', 'r', 'e'};
+        public LinkedList<char> myLinkedList;
+        public Node<string> node;
+        public SystemLinkedListString()
+        {
+            myLinkedList = new LinkedList<char>(myList);
+        }
         public void Insert(string stringToInsert, int index)
         {
-            throw new NotImplementedException();
+            node = new Node<string>(stringToInsert);
+            myLinkedList.AddAfter(,);
         }
 
         public int Length()
         {
-            throw new NotImplementedException();
+            int counter = 0;
+            foreach (char letter in myLinkedList)
+            {
+                counter++;
+            }
+            Console.WriteLine(counter);
+            return counter;
         }
 
         public void Remove(int startIndex, int numCharsToRemove)

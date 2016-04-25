@@ -8,8 +8,14 @@ namespace CustomString
 {
     //Underlying structure: your own custom linked list
     //Each node of the underlying custom linked list structure holds one character
-    class CustomLinkedListString : ICustomString
+    public class CustomLinkedListString : ICustomString
     {
+        public List<char> myList = new List<char>() { 'r', 'a', 'p', 't', 'u', 'r', 'e' };
+        public LinkedList<char> myLinkedList;
+        public CustomLinkedListString()
+        {
+            myLinkedList = new LinkedList<char>(myList);
+        }
         public void Insert(string stringToInsert, int index)
         {
             throw new NotImplementedException();
